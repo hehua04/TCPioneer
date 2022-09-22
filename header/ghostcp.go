@@ -1,4 +1,4 @@
-package tcpioneer
+package ghostcp
 
 import (
 	"bufio"
@@ -439,6 +439,7 @@ func LoadConfig() error {
 							return err
 						}
 						DNS = tcpAddr.String()
+						DNSOption = option
 						IPMap[tcpAddr.IP.String()] = IPConfig{option, minTTL, maxTTL, syncMSS}
 						logPrintln(2, string(line))
 					} else if keys[0] == "ecs" {
