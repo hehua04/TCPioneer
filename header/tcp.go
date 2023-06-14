@@ -226,12 +226,11 @@ func TCPRecv(address string, forward bool) {
 							copy(tmp_cookies, cookies)
 							CookiesMap[packet.SrcIP().String()] = tmp_cookies
 							continue
-						} else {
-							ackNum := binary.BigEndian.Uint32(packet.Raw[ipheadlen+8:])
-							ackNum = info.SeqNum + 1
-							binary.BigEndian.PutUint32(packet.Raw[ipheadlen+8:], ackNum)
-							packet.CalcNewChecksum(winDivert)
-						}
+						} 
+						ackNum := binary.BigEndian.Uint32(packet.Raw[ipheadlen+8:])
+						ackNum = info.SeqNum + 1
+						binary.BigEndian.PutUint32(packet.Raw[ipheadlen+8:], ackNum)
+						packet.CalcNewChecksum(winDivert)
 					}
 				}
 			} else if packet.Raw[ipheadlen+13]|TCP_RST != 0 {
