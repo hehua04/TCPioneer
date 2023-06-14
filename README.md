@@ -1,6 +1,6 @@
 # GhosTCP
 GhosTCP is a program for Windows that protects the TCP connections from being interfered.  
-
+[![CodeFactor](https://www.codefactor.io/repository/github/hehua04/tcpioneer/badge)](https://www.codefactor.io/repository/github/hehua04/tcpioneer)
 ## Compile
 ```
 git clone https://github.com/macronut/ghostcp
