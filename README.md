@@ -3,8 +3,8 @@ GhosTCP is a program for Windows that protects the TCP connections from being in
 [![CodeFactor](https://www.codefactor.io/repository/github/hehua04/tcpioneer/badge)](https://www.codefactor.io/repository/github/hehua04/tcpioneer)
 ## Compile
 ```
-git clone https://github.com/macronut/ghostcp
-cd ghostcp
+git clone https://github.com/hehua04/TCPioneer
+cd TCPioneer
 GOOS=windows GOARCH=amd64 go build
 ```
 Download WinDivert from https://github.com/basil00/Divert/releases/v1.4.3
